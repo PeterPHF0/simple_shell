@@ -1,14 +1,15 @@
+#include "main.h"
 /**
  * pe - current environment variables.
  */
-void pe()
+void pe(void)
 {
-    extern char **environ;
-    char **env;
+char **environ;
+char **env;
 
-    for (env = environ; *env != NULL; env++)
-    {
-        write(STDOUT_FILENO, *env, strlen(*env));
-        write(STDOUT_FILENO, "\n", 1);
-    }
+for (env = environ; *env != NULL; env++)
+{
+write(STDOUT_FILENO, *env, strlen(*env));
+write(STDOUT_FILENO, "\n", 1);
+}
 }

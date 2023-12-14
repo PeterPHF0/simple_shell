@@ -6,6 +6,9 @@
 #include <sys/wait.h>
 #include "main.h"
 
+#define MAX_COMMAND_LENGTH 1024
+#define MAX_ARGUMENTS 10
+
 /**
  * cce - command exists in one of the directories in path.
  * @command: a command to be checked.

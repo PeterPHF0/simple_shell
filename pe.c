@@ -13,12 +13,11 @@
  */
 void pe(void)
 {
-char **environ;
-char **env;
+    char **env;
 
-for (env = environ; *env != NULL; env++)
-{
-write(STDOUT_FILENO, *env, strlen(*env));
-write(STDOUT_FILENO, "\n", 1);
-}
+    for (env = environ; *env != NULL; env++)
+    {
+        write(STDOUT_FILENO, *env, strlen(*env));
+        write(STDOUT_FILENO, "\n", 1);
+    }
 }
